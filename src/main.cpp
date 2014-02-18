@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2012 Litecoin Developers
-// Copyright (c) 2013 Cryptoapples Developers
+// Copyright (c) 2014 Crapples Developers
 
 #include "checkpoints.h"
 #include "db.h"
@@ -51,7 +51,7 @@ map<uint256, map<uint256, CDataStream*> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Cryptoapples Signed Message:\n";
+const string strMessageMagic = "Crapples Signed Message:\n";
 
 double dHashesPerSec;
 int64 nHPSTimerStart;

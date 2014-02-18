@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2012 Litecoin Developers
-// Copyright (c) 2013 Cryptoapples Developers
+// Copyright (c) 2014 Crapples Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -973,13 +973,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Cryptoapples
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Cryptoapples
-    // Mac: ~/Library/Application Support/Cryptoapples
-    // Unix: ~/.Cryptoapples
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Crapples
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Crapples
+    // Mac: ~/Library/Application Support/Crapples
+    // Unix: ~/.crapples
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Cryptoapples";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Crapples";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -991,10 +991,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "Cryptoapples";
+    return pathRet / "Crapples";
 #else
     // Unix
-    return pathRet / ".Cryptoapples";
+    return pathRet / ".crapples";
 #endif
 #endif
 }
