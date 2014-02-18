@@ -831,7 +831,7 @@ static const int64 nDiffChangeTarget = 86400;
 static const int64 patchBlockRewardDuration = 2160;
 
 
-int64 GetCRASubsidy(int nHeight) {
+int64 GetCHESubsidy(int nHeight) {
     // this changes block reward afterpatch - 1% each 3 days
     int64 qSubsidy = 16*COIN;
     int blocks = nHeight - nDiffChangeTarget;
@@ -861,12 +861,12 @@ int64 static GetBlockValue(int nHeight, int64 nFees) {
 
     } else {
         //patch takes effect after 86400 blocks solved
-        nSubsidy = GetCRASubsidy(nHeight);
+        nSubsidy = GetCHESubsidy(nHeight);
     }
 
 
 
-    //make sure the after patch reward is min 1 CRA or more
+    //make sure the after patch reward is min 1 CHE or more
     if(nSubsidy < COIN) {
     nSubsidy = COIN; } if(nHeight > npatchNumberOfBlocks
     && nHeight <= patchNumberOfBlocks) {
@@ -2434,7 +2434,7 @@ CAlert CAlert::getAlertByHash(const uint256 &hash)
 bool CAlert::ProcessAlert()
 {
 	return false;
-	//commenting out this code until we properly implement CRA alerts.
+	//commenting out this code until we properly implement CHE alerts.
 	/*
     if (!CheckSignature())
         return false;
